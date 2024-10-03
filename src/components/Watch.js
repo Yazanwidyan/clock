@@ -27,8 +27,11 @@ const Watch = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const hours = time.getHours().toString().padStart(2, "0");
+  // Convert to 12-hour format with leading zeros
+  const hours24 = time.getHours();
+  const hours = (hours24 % 12 || 12).toString().padStart(2, "0"); // Ensure two digits
   const minutes = time.getMinutes().toString().padStart(2, "0");
+  const ampm = hours24 < 12 ? "AM" : "PM"; // Determine AM/PM
 
   // Calculate the percentage of the bottom section to be filled based on the minutes
   const fillPercentage = (parseInt(minutes) / 60) * 100;
@@ -99,7 +102,7 @@ const Watch = () => {
         onClick={handleHourClick} // Open hour color picker on click
       >
         <span className="time-text" onClick={handleTimeClick}>
-          {hours}
+          {hours} {/* Display hours with AM/PM */}
         </span>{" "}
         {/* Navigate on click */}
       </div>

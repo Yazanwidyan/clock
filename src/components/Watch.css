@@ -38,7 +38,7 @@ html {
   font-family: "Electrolize", sans-serif; /* Use Electrolize font */
   color: #fff; /* White color for text to make it stand out */
   z-index: 2; /* On top of the background */
-  font-size: 20vw; /* Base font size responsive to viewport width */
+  font-size: 21vw; /* Base font size responsive to viewport width */
   font-weight: 900; /* Bold text */
   text-align: center; /* Center text */
 }
