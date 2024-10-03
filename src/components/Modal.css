@@ -1,0 +1,42 @@
+/* src/components/Modal.css */
+.modal-content {
+  position: absolute; /* Position it absolutely */
+  top: 20px; /* Distance from the top */
+  left: 20px; /* Distance from the left */
+  background: white; /* White background for modal */
+  padding: 20px; /* Padding around content */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  z-index: 1000; /* Above everything else */
+  display: flex;
+  flex-direction: row; /* Change to row for horizontal layout */
+  align-items: center; /* Center items vertically */
+}
+
+.modal-header {
+  display: flex; /* Use flexbox for header */
+  justify-content: space-between; /* Space between title and close button */
+  align-items: center; /* Center align items */
+  width: 100%; /* Full width of the modal */
+}
+
+.close-button {
+  background: none; /* No background */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor */
+}
+
+.close-icon {
+  font-size: 28px; /* Increased font size for the icon */
+  color: #555; /* Icon color */
+  margin: 0; /* Remove default margin */
+}
+
+.close-button:hover .close-icon {
+  color: red; /* Change color on hover */
+}
+
+/* Add some margin to input for spacing */
+input[type="color"] {
+  margin-left: 10px; /* Space between close button and color input */
+}

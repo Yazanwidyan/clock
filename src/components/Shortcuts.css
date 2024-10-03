@@ -1,0 +1,76 @@
+/* src/components/Shortcuts.css */
+.shortcuts-container {
+  padding: 20px;
+  text-align: center;
+  background-color: #2a2a2a; /* Dark background for the entire container */
+  color: white; /* White text color */
+  min-height: 100vh; /* Full height for the container */
+}
+
+.back-icon {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ff5722; /* Back icon color */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+h1 {
+  margin-bottom: 40px;
+  font-size: 3rem; /* Larger title font size */
+  color: #2196f3; /* Title color */
+}
+
+.shortcuts-table {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center the columns */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.column {
+  width: 28%; /* Set the width of each column */
+  margin: 10px; /* Add some margin between columns */
+  border: 2px solid #ff5722; /* Orange border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the columns */
+  background-color: #333; /* Slightly lighter background for columns */
+}
+
+.column h2 {
+  font-size: 1.5rem; /* Title font size */
+  margin-bottom: 15px;
+  color: #2196f3; /* Column title color */
+}
+
+table {
+  width: 100%; /* Make table full width */
+  border-collapse: collapse; /* Merge borders */
+}
+
+td {
+  border: 1px solid #444; /* Darker border for table cells */
+  padding: 10px; /* Padding inside table cells */
+  text-align: left; /* Align text to left */
+  color: #e0e0e0; /* Lighter text color for table cells */
+}
+
+tr:nth-child(even) {
+  background-color: #444; /* Even row color */
+}
+
+tr:hover {
+  background-color: #555; /* Hover effect for rows */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1024px) {
+  .column {
+    width: 100%; /* Change column width for tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .column {
+    width: 100%; /* Full width for mobile */
+    margin: 10px 0; /* Adjust margin for mobile */
+  }
+}
