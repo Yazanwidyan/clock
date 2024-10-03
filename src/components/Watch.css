@@ -52,12 +52,12 @@ html {
 
 @media (max-width: 768px) {
   .time-text {
-    font-size: 65vw; /* Adjust size for tablets */
+    font-size: 55vw; /* Adjust size for tablets */
   }
 }
 
 @media (max-width: 480px) {
   .time-text {
-    font-size: 65vw; /* Adjust size for tablets */
+    font-size: 55vw; /* Adjust size for tablets */
   }
 }
