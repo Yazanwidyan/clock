@@ -24,8 +24,8 @@ html {
   position: absolute;
   color: #ffffff;
   background: transparent;
-  top: 20px;
-  right: 20px;
+  top: 2vw; /* Responsive margin */
+  right: 2vw; /* Responsive margin */
   border: none;
   cursor: pointer;
   font-size: 1.5rem;
@@ -36,11 +36,11 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 95%; /* Full width with padding */
-  height: 90vh; /* Adjusted height for clock */
+  width: 95vw; /* Full width with padding */
+  height: 80vh; /* Adjusted height for clock */
   background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
   border-radius: 10px; /* Rounded edges */
-  padding: 40px; /* Padding around the clock */
+  padding: 5vh; /* Padding around the clock */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
 }
 
@@ -56,32 +56,57 @@ html {
 
 .colon {
   color: #ffffff; /* White color for the colon */
-  font-size: 15rem; /* Larger size for colon */
+  font-size: 12vw; /* Larger size for colon, using viewport units */
   font-weight: bold; /* Bold for emphasis */
-  margin: 0 20px; /* Space around the colon */
+  margin: 0 2vw; /* Space around the colon */
 }
 
 .time-text {
   color: #ffffff;
-  font-size: 35rem; /* Responsive size */
+  font-size: 25vw; /* Responsive size using viewport width */
   font-weight: 600;
   text-align: center;
 }
 
 .ampm {
-  font-size: 0.5em; /* Smaller size for AM/PM */
+  font-size: 0.3em; /* Smaller size for AM/PM */
   opacity: 0.7; /* Slightly transparent */
 }
 
 /* Media queries for finer control */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .horizontal-clock {
-    height: 15%; /* Adjust height for smaller screens */
+    height: 60vh; /* Adjust height for tablets */
   }
   .time-text {
-    font-size: 4rem; /* Adjust size for smaller devices */
+    font-size: 18vw; /* Adjust size for tablets */
   }
   .colon {
-    font-size: 4rem; /* Adjust size for smaller devices */
+    font-size: 9vw; /* Adjust size for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .horizontal-clock {
+    height: 50vh; /* Adjust height for smaller screens */
+  }
+  .time-text {
+    font-size: 14vw; /* Adjust size for smaller devices */
+  }
+  .colon {
+    font-size: 7vw; /* Adjust size for smaller devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .horizontal-clock {
+    height: 40vh; /* Further reduce height for small screens */
+  }
+  .time-text {
+    font-size: 12vw; /* Smaller font for phones */
+  }
+  .colon {
+    font-size: 5vw; /* Adjust size for small devices */
+    margin: 0 1vw; /* Less space around the colon */
   }
 }
