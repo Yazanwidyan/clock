@@ -40,7 +40,7 @@ html {
   height: 80vh; /* Adjusted height for clock */
   background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
   border-radius: 10px; /* Rounded edges */
-  padding: 5vh; /* Padding around the clock */
+  padding: 10px; /* Padding around the clock */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
 }
 
@@ -76,10 +76,10 @@ html {
 /* Media queries for finer control */
 @media (max-width: 1024px) {
   .horizontal-clock {
-    height: 60vh; /* Adjust height for tablets */
+    height: 90vh; /* Adjust height for tablets */
   }
   .time-text {
-    font-size: 18vw; /* Adjust size for tablets */
+    font-size: 30vw; /* Adjust size for tablets */
   }
   .colon {
     font-size: 9vw; /* Adjust size for tablets */
