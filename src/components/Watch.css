@@ -1,112 +1,98 @@
 body,
 html {
-  font-family: "Poppins";
   margin: 0;
+  padding: 0;
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #212121; /* Dark background */
+  background: #474747; /* Light blue background */
 }
 
 .watch-container {
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time-date-wrapper {
+  display: flex;
+  width: 100vw;
+  height: 90vh; /* Occupy 80% of the height */
+  justify-content: space-evenly; /* Even spacing between clock and date */
+  align-items: center;
+}
+
+/* Clock box styling */
+.clock-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47vw; /* Occupy 45% of the width */
+  height: 100%; /* Occupy 90% of the parent height */
+  background-color: #ffffff;
+  border-radius: 130px;
   position: relative;
-  width: 100vw; /* Full width */
-  height: 100vh; /* Full height */
-  display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.fullscreen-btn {
-  position: absolute;
-  color: #ffffff;
-  background: transparent;
-  top: 2vw; /* Responsive margin */
-  right: 2vw; /* Responsive margin */
-  border: none;
-  cursor: pointer;
-  font-size: 1.5rem;
-  z-index: 1000; /* Ensure it’s above other elements */
-}
-
-.horizontal-clock {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 95vw; /* Full width with padding */
-  height: 80vh; /* Adjusted height for clock */
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-  border-radius: 10px; /* Rounded edges */
-  padding: 10px; /* Padding around the clock */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
-}
-
-.time-section {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px; /* Rounded edges */
-  transition: background 0.3s ease;
-  flex: 1; /* Allow sections to grow and fill space */
-}
-
-.colon {
-  color: #ffffff; /* White color for the colon */
-  font-size: 12vw; /* Larger size for colon, using viewport units */
-  font-weight: bold; /* Bold for emphasis */
-  margin: 0 2vw; /* Space around the colon */
-}
-
-.time-text {
-  color: #ffffff;
-  font-size: 25vw; /* Responsive size using viewport width */
-  font-weight: 600;
+.clock-text {
+  font-size: 19vw; /* Responsive font size */
+  font-weight: bold;
+  color: #000000;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
-.ampm {
-  font-size: 0.3em; /* Smaller size for AM/PM */
-  opacity: 0.7; /* Slightly transparent */
+/* Date box styling */
+.date-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 47vw; /* Occupy 45% of the width */
+  height: 100%; /* Occupy 90% of the parent height */
+  background-color: #000000;
+  border-radius: 130px;
+  color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Media queries for finer control */
-@media (max-width: 1024px) {
-  .horizontal-clock {
-    height: 90vh; /* Adjust height for tablets */
-  }
-  .time-text {
-    font-size: 30vw; /* Adjust size for tablets */
-  }
-  .colon {
-    font-size: 9vw; /* Adjust size for tablets */
-  }
+.date-day {
+  font-size: 8vw; /* Responsive day size */
+  color: #ff0000;
+  font-weight: bold;
+  line-height: 6vw;
 }
 
+.date-month {
+  line-height: 10vw;
+  font-size: 9vw; /* Responsive day size */
+  color: #cccccc;
+  font-weight: bold;
+}
+
+.date-number {
+  line-height: 23vw;
+  font-size: 26vw; /* Responsive date size */
+  font-weight: bold;
+}
+
+/* Media Queries for smaller screens */
 @media (max-width: 768px) {
-  .horizontal-clock {
-    height: 50vh; /* Adjust height for smaller screens */
+  .time-date-wrapper {
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
   }
-  .time-text {
-    font-size: 14vw; /* Adjust size for smaller devices */
-  }
-  .colon {
-    font-size: 7vw; /* Adjust size for smaller devices */
-  }
-}
 
-@media (max-width: 480px) {
-  .horizontal-clock {
-    height: 40vh; /* Further reduce height for small screens */
-  }
-  .time-text {
-    font-size: 12vw; /* Smaller font for phones */
-  }
-  .colon {
-    font-size: 5vw; /* Adjust size for small devices */
-    margin: 0 1vw; /* Less space around the colon */
+  .clock-box,
+  .date-box {
+    width: 90vw; /* Adjust width for smaller screens */
+    height: 40vh; /* Adjust height for smaller screens */
   }
 }
