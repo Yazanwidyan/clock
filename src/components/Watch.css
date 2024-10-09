@@ -34,13 +34,13 @@ html {
   width: 47vw; /* Occupy 45% of the width */
   height: 100%; /* Occupy 90% of the parent height */
   background-color: #ffffff;
-  border-radius: 10px;
+  border-radius: 60px;
   position: relative;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .clock-text {
-  font-size: 21vw; /* Responsive font size */
+  font-size: 22vw; /* Responsive font size */
   font-weight: bold;
   color: #000000;
   text-align: center;
@@ -57,7 +57,7 @@ html {
   width: 47vw; /* Occupy 45% of the width */
   height: 100%; /* Occupy 90% of the parent height */
   background-color: #000000;
-  border-radius: 10px;
+  border-radius: 60px;
   color: white;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
