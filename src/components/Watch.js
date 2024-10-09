@@ -3,11 +3,21 @@ import "./Watch.css";
 
 const Watch = () => {
   const [time, setTime] = useState(new Date());
+  const [isFullScreen, setIsFullScreen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => setTime(new Date()), 1000);
     return () => clearInterval(interval);
   }, []);
+
+  const toggleFullScreen = () => {
+    if (!isFullScreen) {
+      document.documentElement.requestFullscreen();
+    } else {
+      document.exitFullscreen();
+    }
+    setIsFullScreen(!isFullScreen);
+  };
 
   const hours24 = time.getHours();
   const hours = (hours24 % 12 || 12).toString();
@@ -34,6 +44,11 @@ const Watch = () => {
           </div>
           <span className="date-number">{date}</span>
         </div>
+      </div>
+
+      {/* Fullscreen Button */}
+      <div className="fullscreen-btn" onClick={toggleFullScreen}>
+        {isFullScreen ? "-" : "-"}
       </div>
     </div>
   );
