@@ -31,7 +31,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 47vw; /* Occupy 45% of the width */
+  width: 49vw; /* Occupy 45% of the width */
   height: 100%; /* Occupy 90% of the parent height */
   background-color: #ffffff;
   border-radius: 60px;
@@ -40,7 +40,7 @@ html {
 }
 
 .clock-text {
-  font-size: 22vw; /* Responsive font size */
+  font-size: 24vw; /* Responsive font size */
   font-weight: bold;
   color: #000000;
   text-align: center;
@@ -63,22 +63,22 @@ html {
 }
 
 .date-day {
-  font-size: 10vw; /* Responsive day size */
+  line-height: 10vw;
+  font-size: 14vw; /* Responsive day size */
   color: #ff0000;
   font-weight: bold;
-  line-height: 10vw;
 }
 
 .date-month {
   line-height: 10vw;
-  font-size: 10vw; /* Responsive day size */
+  font-size: 14vw; /* Responsive day size */
   color: #cccccc;
   font-weight: bold;
 }
 
 .date-number {
-  line-height: 23vw;
-  font-size: 28vw; /* Responsive date size */
+  line-height: 28vw;
+  font-size: 30vw; /* Responsive date size */
   font-weight: bold;
 }
 

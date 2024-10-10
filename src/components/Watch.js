@@ -26,12 +26,15 @@ const Watch = () => {
   const month = time.toLocaleString("en-US", { month: "short" });
   const date = time.getDate().toString();
 
+  // Set font size based on the length of the hours
+  const hoursFontSize = hours.length === 2 ? "24vw" : "27vw";
+
   return (
     <div className="watch-container">
       <div className="time-date-wrapper">
         {/* Clock */}
         <div className="clock-box">
-          <span className="clock-text">
+          <span className="clock-text" style={{ fontSize: hoursFontSize }}>
             {hours}:{minutes}
           </span>
         </div>
